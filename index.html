@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            width: 100%;
+            margin-top:15px;
+            background-color: AntiqueWhite;
+        }
+        
+        h1{
+          background-color:CadetBlue;
+          color:FloralWhite;
+          text-align: center;
+          font-family:Verdana;
+          font-size: 25px;
+        }
+         h2{
+          background-color:CadetBlue;
+          color:FloralWhite;
+          text-align: center;
+          font-family:Verdana;
+          font-size: 25px;
+        }
+
+        td,tr{
+          background-color: DarkSlateGray
+        }
+        img {
+            width: 100%;
+            height: auto;
+            
+        }
+    </style>
+</head>
+<body>
+    <table id="art-table">
+        <head>
+<h1><><><><><><><>ART GALLERY<><><><><><><><></h1>
+
+                
+  
+        </head>
+        <tbody>
+            <tr>
+                <td><img id="foto1"></td>
+                <td><img id="foto2"></td>
+                <td><img id="foto3"></td>
+            </tr>
+                      <tr>
+                <td><img id="foto4"></td>
+                <td><img id="foto5"></td>
+                <td><img id="foto6"></td>
+            </tr>
+            <tr>
+                <td><img id="foto7"></td>
+                <td><img id="foto8"></td>
+                <td><img id="foto9"></td>
+            </tr>
+            <tr>
+                <td><img id="foto10"></td>
+                <td><img id="foto11"></td>
+                <td><img id="foto12"></td>
+            </tr>
+            <tr>
+                <td><img id="foto13"></td>
+                <td><img id="foto14"></td>
+                <td><img id="foto15"></td>
+            </tr>
+        </tbody>
+    </table>
+
+  <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function refreshfoto() {
+                return `https://source.unsplash.com/random/300x300?sig=${Math.random()}`;
+            }
+
+            function refreshpage() {
+                for (let i = 1; i <= 15; i++) {
+                    let element= document.getElementById(`foto${i}`);
+                    element.src = refreshfoto();
+
+                    
+                }
+            }
+
+      
+            refreshpage();
+        });
+    </script>
+
+    <h2><><><><><><><><><><><><><><><><><<><><></h2>
+</body>
+</html>

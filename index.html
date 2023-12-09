@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+      body{
+      background-color:LightGrey;
+      }
         table {
             width: 100%;
-            margin-top:15px;
-            background-color: AntiqueWhite;
+            margin-top:35px;
+            background-color: black;
         }
         
         h1{
@@ -16,13 +19,15 @@
           text-align: center;
           font-family:Verdana;
           font-size: 25px;
+         
         }
          h2{
           background-color:CadetBlue;
           color:FloralWhite;
           text-align: center;
           font-family:Verdana;
-          font-size: 25px;
+          font-size::25px;
+         
         }
 
         td,tr{
@@ -48,6 +53,7 @@
                 <td><img id="foto1"></td>
                 <td><img id="foto2"></td>
                 <td><img id="foto3"></td>
+                 
             </tr>
                       <tr>
                 <td><img id="foto4"></td>
@@ -75,7 +81,7 @@
   <script>
         document.addEventListener('DOMContentLoaded', function () {
             function refreshfoto() {
-                return `https://source.unsplash.com/random/300x300?sig=${Math.random()}`;
+                return `https://source.unsplash.com/random/200x200?sig=${Math.random()}`;
             }
 
             function refreshpage() {
